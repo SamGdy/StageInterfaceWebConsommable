@@ -1,0 +1,17 @@
+@startuml
+actor Utilisateur
+left to right direction
+rectangle InterfaceWeb{
+    Utilisateur--(VueSite)
+    (VueSite)..>(ImprimanteSelectionnee):include
+    (VueSite)..>(AjouterImprimante):include
+    (VueSite)..>(StockConsommable):include
+    (StockConsommable)..>(AjouterDesConsommables):include
+    (ImprimanteSelectionnee)..>(ModifierImprimante):include
+    (ImprimanteSelectionnee)<.(DetailImprimante):extend
+    (ImprimanteSelectionnee)..>(RealiserUneOperation):include
+    
+}
+
+
+@enduml

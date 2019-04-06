@@ -1,0 +1,28 @@
+@startuml
+class Imprimante{
+    <u>id</u>
+    nom
+    marque
+    salle
+
+}
+class Consommable{
+    <u>id</u>
+    nom
+    libelle
+    nombreDisponible
+}
+class Utilise{
+    
+}
+class Operation{
+    <u>id</u>
+    user
+    date
+    description
+    operation
+}
+Imprimante"0..*"->"1..*"Consommable:utilise
+(Imprimante,Consommable) . Utilise
+Operation"0..*"-->"1"Consommable:realiser
+@enduml
